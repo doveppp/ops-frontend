@@ -62,6 +62,22 @@ export const constantRoutes: RouteRecordRaw[] = [
     ]
   },
   {
+    path: "/monitor",
+    component: Layouts,
+    redirect: "/monitor/index",
+    children: [
+      {
+        path: "index",
+        component: () => import("@/views/monitor/index.vue"),
+        name: "Monitor",
+        meta: {
+          title: "监控",
+          svgIcon: "monitor"
+        }
+      }
+    ]
+  },
+  {
     path: "/unocss",
     component: Layouts,
     redirect: "/unocss/index",
@@ -80,16 +96,16 @@ export const constantRoutes: RouteRecordRaw[] = [
   {
     path: "/link",
     meta: {
-      title: "外链",
+      title: "相关链接",
       svgIcon: "link"
     },
     children: [
       {
-        path: "https://juejin.cn/post/7089377403717287972",
+        path: "https://github.com/doveppp/ops-frontend",
         component: () => {},
         name: "Link1",
         meta: {
-          title: "中文文档"
+          title: "前端GitHub地址"
         }
       },
       {

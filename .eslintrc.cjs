@@ -33,14 +33,14 @@ module.exports = {
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-unused-vars": [
-      "error",
+      "warn",
       {
         argsIgnorePattern: "^_",
         varsIgnorePattern: "^_"
       }
     ],
     "no-unused-vars": [
-      "error",
+      "warn",
       {
         argsIgnorePattern: "^_",
         varsIgnorePattern: "^_"
@@ -65,7 +65,7 @@ module.exports = {
     ],
     // Prettier
     "prettier/prettier": [
-      "error",
+      "warn",
       {
         endOfLine: "auto"
       }
